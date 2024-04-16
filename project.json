@@ -1,0 +1,24 @@
+{
+  "name": "test-work",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "test-work:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "test-work:build:development"
+        },
+        "production": {
+          "buildTarget": "test-work:build:production"
+        }
+      }
+    }
+  }
+}
